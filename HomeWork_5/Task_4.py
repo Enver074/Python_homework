@@ -19,18 +19,19 @@ def encode(data):
         encoding += str(count) + prev_char
         return encoding
 
-def decode(our_message):
+def decode(data):
     decoded_message = ""
     i = 0
     j = 0
-    while (i <= len(our_message) - 1):
-        run_count = int(our_message[i])
-        run_word = our_message[i + 1]  
+    while (i <= len(data) - 1):
+        run_count = int(data[i])
+        run_word = data[i + 1]  
         for j in range(run_count):
             decoded_message = decoded_message+run_word
             j = j + 1
         i = i + 2
     return decoded_message
 
-print(decode(encode(data)))
+
 print(encode(data))
+print(decode(encode(data)))
