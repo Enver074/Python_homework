@@ -8,10 +8,13 @@ a = int(input('a: '))
 n = int(input('n: '))
 d = int(input('d: '))
 
-arr = []
+# arr = []
  
-for i in range(n):
-    c = a + i*d
-    arr.append(c)
+# for i in range(n):
+#     c = a + i*d
+#     arr.append(c)
 
+# print(arr)
+
+arr = [a+(i-1)*d for i in range(1, n+1)]
 print(arr)
